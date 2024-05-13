@@ -10,14 +10,16 @@ public:
 	Application();
 	~Application();
 
+	void setCurrentBehaviour(AI::SteeringBehaviour Behaviour);
+
 	void run();
 
 private:
-	void drawWindow();
-	void handleInput(sf::RenderWindow& Window);
-
 	User MUser;
+	AI::SteeringBehaviour MCurrentBehaviour;
 
 	std::vector<AI> MAiEntities;
-	Behaviour MCurrentBehaviour;
+
+	void drawWindow();
+	void handleInput(sf::RenderWindow& Window);
 };

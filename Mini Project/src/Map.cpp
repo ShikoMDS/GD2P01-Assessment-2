@@ -10,7 +10,7 @@ Map::~Map()
 	unloadMap();
 }
 
-void Map::loadFromFile(const std::string& Filename, sf::RenderWindow& Window)
+void Map::loadFromFile(const std::string& Filename, sf::RenderWindow& Window) const
 {
 	std::ifstream File(Filename);
 	if (!File.is_open())
@@ -37,7 +37,7 @@ void Map::unloadMap()
 {
 }
 
-void Map::drawObstacles(sf::RenderWindow& Window, const std::vector<std::vector<char>>& Map)
+void Map::drawObstacles(sf::RenderWindow& Window, const std::vector<std::vector<char>>& Map) const
 {
 	std::cout << "Drawing obstacles..." << std::endl;
 

@@ -155,7 +155,6 @@
   <ItemGroup>
     <ClInclude Include="include\AI.h" />
     <ClInclude Include="include\Application.h" />
-    <ClInclude Include="include\Behaviour.h" />
     <ClInclude Include="include\Entity.h" />
     <ClInclude Include="include\Map.h" />
     <ClInclude Include="include\User.h" />

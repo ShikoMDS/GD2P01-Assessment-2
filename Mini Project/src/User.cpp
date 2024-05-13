@@ -5,13 +5,14 @@ User::User(const sf::Vector2f InitialPosition)
 {
 	if (!MTexture.loadFromFile("resources/images/herta kuru ss.jpg"))
 	{
-		// Handle error
+		std::cout << "Image failed to load!" << std::endl;
+		std::cout << "Failed to load user animation sequence." << std::endl;
 	}
 	MSprite.setTexture(MTexture);
-	MSprite.setScale(1.0f, 1.0f); // Adjust scale as needed
+	MSprite.setScale(1.0f, 1.0f);
 
 	// Define the rectangle for the initial frame of animation
-	MFrameRect = sf::IntRect(0, 0, 32, 32); // Each frame is 32x32 pixels
+	MFrameRect = sf::IntRect(0, 0, 32, 32);
 
 	// Calculate the number of frames based on the texture width and frame width
 	MNumFrames = MTexture.getSize().x / MFrameRect.width;
@@ -93,7 +94,7 @@ void User::update(float DeltaTime)
 	const float FrameTime = 1.0f / MAnimationSpeed; // Time per frame
 	if (MAnimationClock.getElapsedTime().asSeconds() > FrameTime)
 	{
-		MCurrentFrame = (MCurrentFrame + 1) % MNumFrames; // Increment frame index (looping)
+		MCurrentFrame = (MCurrentFrame + 1) % MNumFrames; // Increment frame index (loop)
 		MAnimationClock.restart(); // Restart animation clock
 	}
 

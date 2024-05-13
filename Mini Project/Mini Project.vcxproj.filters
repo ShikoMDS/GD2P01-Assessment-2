@@ -50,8 +50,5 @@
     <ClInclude Include="include\AI.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Behaviour.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

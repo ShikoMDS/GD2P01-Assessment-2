@@ -14,12 +14,12 @@ public:
 	Map();
 	~Map();
 
-	void loadFromFile(const std::string& Filename, sf::RenderWindow& Window);
+	void loadFromFile(const std::string& Filename, sf::RenderWindow& Window) const;
 
-	void unloadMap();
+	static void unloadMap();
 
 private:
-	void drawObstacles(sf::RenderWindow& Window, const std::vector<std::vector<char>>& Map);
+	void drawObstacles(sf::RenderWindow& Window, const std::vector<std::vector<char>>& Map) const;
 
 	const float TileSize = 32.0f;
 };
